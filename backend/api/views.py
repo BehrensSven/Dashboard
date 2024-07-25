@@ -1,5 +1,7 @@
-from django.shortcuts import render
-from django.http import JsonResponse
+from rest_framework import viewsets
+from .models import MyModel
+from .serializers import MyModelSerializer
 
-def api_overview(request):
-    return JsonResponse({"message": "Hello from Django"})
+class MyModelViewSet(viewsets.ModelViewSet):
+    queryset = MyModel.objects.all()
+    serializer_class = MyModelSerializer
