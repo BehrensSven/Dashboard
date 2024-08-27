@@ -8,6 +8,7 @@
           <li><a href="#news">News</a></li>
           <li><a href="#studium">Studium</a></li>
           <li><a href="#infos">Infos</a></li>
+          <li class="logout-button"><button @click="logout">Logout</button></li>
         </ul>
       </nav>
     </header>
@@ -33,6 +34,15 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const logout = () => {
+  localStorage.removeItem('accessToken');
+  localStorage.removeItem('refreshToken');
+  router.push('/login');
+};
 </script>
 
 <style scoped>
@@ -63,6 +73,24 @@ nav ul li a {
 nav ul li a:hover {
   color: #34B466;
   text-shadow: 0 0 10px rgba(52, 180, 102, 0.7);
+}
+
+.logout-button {
+  margin-left: auto;
+}
+
+.logout-button button {
+  background-color: #34B466;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button button:hover {
+  background-color: #2d9c55;
 }
 
 main {

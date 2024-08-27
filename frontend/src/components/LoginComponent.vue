@@ -7,6 +7,7 @@
         <input type="password" v-model="password" placeholder="Password" class="input-field" />
         <button type="submit" class="login-button">Login</button>
       </form>
+      <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
       <button @click="goToRegister" class="register-button">Registrierung</button>
     </div>
   </div>
@@ -19,18 +20,26 @@ import { useRouter } from 'vue-router';
 
 const username = ref('');
 const password = ref('');
+const errorMessage = ref('');
 const router = useRouter();
 
 const login = () => {
-  axios.post('/api/login/', { username: username.value, password: password.value })
-    .then(response => {
-      console.log(response.data);
-    })
-    .catch(error => {
-      console.error(error);
-    });
-};
-
+      axios.post('http://127.0.0.1:8050/api/token/', { username: username.value, password: password.value })
+        .then(response => {
+          if (response.data.access) {
+            localStorage.setItem('access_token', response.data.access);
+            localStorage.setItem('refresh_token', response.data.refresh);
+            router.push('/dashboard');
+          } else {
+            console.error('No access token received');
+            errorMessage.value = 'Login failed. Please try again.';
+          }
+        })
+        .catch(error => {
+          console.error('Login failed:', error);
+          errorMessage.value = 'Invalid username or password.';
+        });
+    };
 const goToRegister = () => {
   router.push('/register');
 };
@@ -115,5 +124,9 @@ body {
 
 .register-button:hover {
   background-color: #f5f5f5;
+}
+
+.error-message {
+  color: red;
 }
 </style>

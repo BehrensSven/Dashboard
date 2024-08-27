@@ -24,9 +24,9 @@ const password = ref('');
 const router = useRouter();
 
 const register = () => {
-  axios.post('/api/register/', { username: username.value, email: email.value, password: password.value })
-    .then(response => {
-      console.log(response.data);
+  axios.post('http://127.0.0.1:8050/api/users/', { username: username.value, email: email.value, password: password.value })
+    .then(() => {
+      router.push('/login');
     })
     .catch(error => {
       console.error(error);
