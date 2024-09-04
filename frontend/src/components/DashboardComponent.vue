@@ -3,30 +3,37 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#dashboard">Dashboard</a></li>
-          <li><a href="#kurse">Kurse</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#studium">Studium</a></li>
-          <li><a href="#infos">Infos</a></li>
+          <li><a href="#news-section">Dashboard</a></li>
+          <li><a href="#section2">Kurse</a></li>
+          <li><a href="#section3">News</a></li>
+          <li><a href="#section4">Studium</a></li>
+          <li><a href="#section5">Infos</a></li>
+          <li class="spacer"></li>
           <li class="logout-button"><button @click="logout">Logout</button></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section id="section1" class="section">Section 1</section>
-      <section id="section2" class="section">Section 2</section>
-      <section id="section3" class="section">Section 3</section>
-      <section id="section4" class="section">Section 4</section>
+      <div class="dashboard-grid">
+        <section id="news-section" class="dashboard-tile">
+          <News />
+        </section>
+        <section id="section2" class="dashboard-tile">Section 2</section>
+        <section id="section3" class="dashboard-tile">Section 3</section>
+        <section id="section4" class="dashboard-tile">Section 4</section>
+        <section id="section5" class="dashboard-tile">Section 5</section>
+      </div>
     </main>
 
     <footer>
       <nav>
         <ul>
-          <li><a href="#section1">Section 1</a></li>
+          <li><a href="#news-section">Section 1</a></li>
           <li><a href="#section2">Section 2</a></li>
           <li><a href="#section3">Section 3</a></li>
           <li><a href="#section4">Section 4</a></li>
+          <li><a href="#section5">Section 5</a></li>
         </ul>
       </nav>
     </footer>
@@ -35,6 +42,7 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
+import News from './NewsComponent.vue';
 
 const router = useRouter();
 
@@ -46,9 +54,17 @@ const logout = () => {
 </script>
 
 <style scoped>
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   background-color: whitesmoke;
   padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 nav ul {
@@ -57,6 +73,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 nav ul li {
@@ -73,6 +90,10 @@ nav ul li a {
 nav ul li a:hover {
   color: #34B466;
   text-shadow: 0 0 10px rgba(52, 180, 102, 0.7);
+}
+
+.spacer {
+  flex-grow: 1;
 }
 
 .logout-button {
@@ -94,17 +115,27 @@ nav ul li a:hover {
 }
 
 main {
-  height: calc(100% - 80px);
-  overflow-y: scroll;
+  padding-top: 60px;
 }
 
-.section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
+.dashboard-grid {
+  display: grid;
+  margin: 10px 25px 10px 25px;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.dashboard-tile {
+  background-color: #f9f9f9;
   border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.dashboard-tile:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 footer {
@@ -137,5 +168,9 @@ footer nav ul li a {
 footer nav ul li a:hover {
   color: white;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+#news-section {
+  background-color: #D9D9D9;
 }
 </style>

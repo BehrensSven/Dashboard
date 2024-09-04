@@ -17,6 +17,7 @@
 import { ref } from 'vue';
 import axios from 'axios';
 import { useRouter } from 'vue-router';
+import { BASE_URL } from '../config'
 
 const username = ref('');
 const password = ref('');
@@ -24,7 +25,7 @@ const errorMessage = ref('');
 const router = useRouter();
 
 const login = () => {
-      axios.post('http://127.0.0.1:8050/api/token/', { username: username.value, password: password.value })
+      axios.post(`${BASE_URL}/api/token/`, { username: username.value, password: password.value })
         .then(response => {
           if (response.data.access) {
             localStorage.setItem('access_token', response.data.access);

@@ -1,7 +1,8 @@
 from rest_framework import viewsets
-from django.contrib.auth.models import User
 from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
-from .serializers import UserSerializer
+from .serializers import UserSerializer, NewsSerializer
+from django.contrib.auth.models import User
+from .models import News
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -15,3 +16,9 @@ class UserViewSet(viewsets.ModelViewSet):
         else:
             permission_classes = [IsAuthenticated]
         return [permission() for permission in permission_classes]
+    
+class NewsViewSet(viewsets.ModelViewSet):
+    queryset = News.objects.all().order_by('-created_at')
+    serializer_class = NewsSerializer
+    permission_classes = [AllowAny]
+    
