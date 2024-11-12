@@ -4,7 +4,7 @@
       <nav>
         <ul>
           <li><a href="#news-section">Dashboard</a></li>
-          <li><a href="#section2">Kurse</a></li>
+          <li><a href="#course-section">Kurse</a></li>
           <li><a href="#section3">News</a></li>
           <li><a href="#section4">Studium</a></li>
           <li><a href="#section5">Infos</a></li>
@@ -17,9 +17,11 @@
     <main>
       <div class="dashboard-grid">
         <section id="news-section" class="dashboard-tile">
-          <News />
+          <NewsComponent />
         </section>
-        <section id="section2" class="dashboard-tile">Section 2</section>
+        <section id="course-section" class="dashboard-tile">
+          <CourseComponent />
+        </section>
         <section id="section3" class="dashboard-tile">Section 3</section>
         <section id="section4" class="dashboard-tile">Section 4</section>
         <section id="section5" class="dashboard-tile">Section 5</section>
@@ -30,7 +32,7 @@
       <nav>
         <ul>
           <li><a href="#news-section">Section 1</a></li>
-          <li><a href="#section2">Section 2</a></li>
+          <li><a href="#course-section">Section 2</a></li>
           <li><a href="#section3">Section 3</a></li>
           <li><a href="#section4">Section 4</a></li>
           <li><a href="#section5">Section 5</a></li>
@@ -42,7 +44,8 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
-import News from './NewsComponent.vue';
+import NewsComponent from './NewsComponent.vue';
+import CourseComponent from './CourseComponent.vue';
 
 const router = useRouter();
 
@@ -171,6 +174,10 @@ footer nav ul li a:hover {
 }
 
 #news-section {
+  background-color: #D9D9D9;
+}
+
+#course-section {
   background-color: #D9D9D9;
 }
 </style>

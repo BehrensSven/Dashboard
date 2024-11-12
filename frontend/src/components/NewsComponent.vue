@@ -13,7 +13,7 @@
       </div>
     </div>
     <div v-else>
-      <p style="font-weight: lighter;">Noch keine News verfügbar.</p>
+      <p style="font-weight: lighter;">No news available</p>
     </div>
   </div>
 </template>
@@ -27,8 +27,13 @@ import { BASE_URL } from '../config'
 const news = ref([])
 
 const fetchNews = async () => {
+  const token = localStorage.getItem('access_token');
   try {
-    const response = await axios.get(`${BASE_URL}/api/news/`)
+    const response = await axios.get(`${BASE_URL}/api/news/`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
     news.value = response.data
   } catch (error) {
     console.error("Fehler beim Laden der News:", error)
