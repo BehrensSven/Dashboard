@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import News
+from .models import News, Module, StudentModule
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -20,3 +20,18 @@ class NewsSerializer(serializers.ModelSerializer):
     class Meta:
         model = News
         fields = '__all__'
+
+class ModuleSerializer(serializers.ModelSerializer):
+    is_active = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Module
+        fields = ['id', 'name', 'description', 'is_active']
+
+    def get_is_active(self, obj):
+        user = self.context['request'].user
+        try:
+            student_module = StudentModule.objects.get(user=user, module=obj)
+            return student_module.is_active
+        except StudentModule.DoesNotExist:
+            return False
