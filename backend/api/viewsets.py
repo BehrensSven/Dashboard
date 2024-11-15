@@ -2,7 +2,7 @@ from rest_framework import viewsets
 from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from .serializers import UserSerializer, NewsSerializer, ModuleSerializer
+from .serializers import UserSerializer, NewsSerializer, ModuleSerializer, CompletedModuleSerializer
 from django.contrib.auth.models import User
 from .models import News, StudentModule
 
@@ -28,6 +28,18 @@ class UserViewSet(viewsets.ModelViewSet):
         student_modules = StudentModule.objects.filter(user=user)
         modules = [sm.module for sm in student_modules]
         serializer = ModuleSerializer(modules, many=True, context={'request': request})
+        return Response(serializer.data)
+    
+    @action(detail=True, methods=['get'], url_path='completed-modules', permission_classes=[IsAuthenticated])
+    def completed_modules(self, request, pk=None):
+        user = self.get_object()
+
+        if request.user != user and not request.user.is_staff:
+            raise PermissionDenied("You are not authorised to access this data.")
+
+        student_modules = StudentModule.objects.filter(user=user, is_active=False).order_by('-completion_date')
+
+        serializer = CompletedModuleSerializer(student_modules, many=True)
         return Response(serializer.data)    
     
 class NewsViewSet(viewsets.ModelViewSet):

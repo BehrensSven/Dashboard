@@ -21,12 +21,15 @@ class NewsSerializer(serializers.ModelSerializer):
         model = News
         fields = '__all__'
 
+
 class ModuleSerializer(serializers.ModelSerializer):
     is_active = serializers.SerializerMethodField()
+    grade = serializers.SerializerMethodField()
+    completion_date = serializers.SerializerMethodField()
 
     class Meta:
         model = Module
-        fields = ['id', 'name', 'description', 'is_active']
+        fields = ['id', 'name', 'description', 'is_active', 'grade', 'completion_date']
 
     def get_is_active(self, obj):
         user = self.context['request'].user
@@ -35,3 +38,28 @@ class ModuleSerializer(serializers.ModelSerializer):
             return student_module.is_active
         except StudentModule.DoesNotExist:
             return False
+
+    def get_grade(self, obj):
+        user = self.context['request'].user
+        try:
+            student_module = StudentModule.objects.get(user=user, module=obj)
+            return student_module.grade
+        except StudentModule.DoesNotExist:
+            return None
+
+    def get_completion_date(self, obj):
+        user = self.context['request'].user
+        try:
+            student_module = StudentModule.objects.get(user=user, module=obj)
+            return student_module.completion_date
+        except StudentModule.DoesNotExist:
+            return None
+        
+
+class CompletedModuleSerializer(serializers.ModelSerializer):
+    module_name = serializers.CharField(source='module.name')
+    module_description = serializers.CharField(source='module.description')
+
+    class Meta:
+        model = StudentModule
+        fields = ['module_name', 'module_description', 'grade', 'completion_date']

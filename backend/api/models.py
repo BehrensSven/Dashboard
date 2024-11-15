@@ -55,9 +55,12 @@ class StudentModule(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='student_modules')
     module = models.ForeignKey(Module, on_delete=models.CASCADE, related_name='student_modules')
     is_active = models.BooleanField(default=True)
+    grade = models.DecimalField(max_digits=4, decimal_places=2, null=True, blank=True)
+    completion_date = models.DateField(null=True, blank=True)
 
     class Meta:
         unique_together = ('user', 'module')
 
-    def __str__(self):
-        return f"{self.user.username} - {self.module.name} ({'Aktiv' if self.is_active else 'Inaktiv'})"
+        def __str__(self):
+            status = 'Aktiv' if self.is_active else 'Inaktiv'
+            return f"{self.user.username} - {self.module.name} ({status})"
