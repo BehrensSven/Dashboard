@@ -5,9 +5,8 @@
         <ul>
           <li><a href="#news-section">Dashboard</a></li>
           <li><a href="#course-section">Kurse</a></li>
-          <li><a href="#section3">News</a></li>
+          <li><a href="#grade-chart-section">News</a></li>
           <li><a href="#section4">Studium</a></li>
-          <li><a href="#section5">Infos</a></li>
           <li class="spacer"></li>
           <li class="logout-button"><button @click="logout">Logout</button></li>
         </ul>
@@ -22,20 +21,20 @@
         <section id="course-section" class="dashboard-tile">
           <CourseComponent />
         </section>
-        <section id="section3" class="dashboard-tile">Section 3</section>
+        <section id="grade-chart-section" class="dashboard-tile">
+          <GradesChartComponent />
+        </section>
         <section id="section4" class="dashboard-tile">Section 4</section>
-        <section id="section5" class="dashboard-tile">Section 5</section>
       </div>
     </main>
 
     <footer>
       <nav>
         <ul>
-          <li><a href="#news-section">Section 1</a></li>
-          <li><a href="#course-section">Section 2</a></li>
-          <li><a href="#section3">Section 3</a></li>
+          <li><a href="#news-section">News</a></li>
+          <li><a href="#course-section">Course</a></li>
+          <li><a href="#grade-chart-section">Grade</a></li>
           <li><a href="#section4">Section 4</a></li>
-          <li><a href="#section5">Section 5</a></li>
         </ul>
       </nav>
     </footer>
@@ -46,6 +45,7 @@
 import { useRouter } from 'vue-router';
 import NewsComponent from './NewsComponent.vue';
 import CourseComponent from './CourseComponent.vue';
+import GradesChartComponent from './GradesChartComponent.vue';
 
 const router = useRouter();
 
@@ -178,6 +178,10 @@ footer nav ul li a:hover {
 }
 
 #course-section {
+  background-color: #D9D9D9;
+}
+
+#grade-chart-section{
   background-color: #D9D9D9;
 }
 </style>
