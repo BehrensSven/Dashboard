@@ -2,9 +2,10 @@ from rest_framework import viewsets
 from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from .serializers import UserSerializer, NewsSerializer, ModuleSerializer, CompletedModuleSerializer
+from rest_framework.exceptions import PermissionDenied
+from .serializers import UserSerializer, NewsSerializer, ModuleSerializer, CompletedModuleSerializer, StudentProgressSerializer
 from django.contrib.auth.models import User
-from .models import News, StudentModule
+from .models import News, StudentModule, UserStudyProgram
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -13,7 +14,9 @@ class UserViewSet(viewsets.ModelViewSet):
     def get_permissions(self):
         if self.action == 'create':
             permission_classes = [AllowAny]
-        elif self.action == 'modules':
+        elif self.action in ['modules', 'progress']:
+            permission_classes = [IsAuthenticated]
+        elif self.action in ['completed_modules']:
             permission_classes = [IsAuthenticated]
         elif self.action in ['list', 'retrieve', 'update', 'partial_update', 'destroy']:
             permission_classes = [IsAuthenticated, IsAdminUser]
@@ -41,6 +44,18 @@ class UserViewSet(viewsets.ModelViewSet):
 
         serializer = CompletedModuleSerializer(student_modules, many=True)
         return Response(serializer.data)    
+    
+    @action(detail=False, methods=['get'], url_path='progress', permission_classes=[IsAuthenticated])
+    def progress(self, request):
+        user = request.user
+
+        try:
+            user_study_program = UserStudyProgram.objects.get(user=user)
+        except UserStudyProgram.DoesNotExist:
+            return Response({'error': 'Sie sind in keinem Studiengang eingeschrieben.'}, status=400)
+
+        serializer = StudentProgressSerializer(user)
+        return Response(serializer.data)
     
 class NewsViewSet(viewsets.ModelViewSet):
     queryset = News.objects.all().order_by('-created_at')

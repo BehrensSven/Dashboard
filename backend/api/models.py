@@ -45,8 +45,15 @@ class Module(models.Model):
         return self.name
 
 class UserStudyProgram(models.Model):
+    TIME_MODEL_CHOICES = [
+        (3, '3 Jahre'),
+        (4, '4 Jahre'),
+        (6, '6 Jahre'),
+    ]
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     study_program = models.ForeignKey(StudyProgram, on_delete=models.CASCADE)
+    enrollment_date = models.DateField(null=True, blank=True)
+    time_model = models.IntegerField(choices=TIME_MODEL_CHOICES, null=True, blank=True)
 
     def __str__(self):
         return f"{self.user.username} - {self.study_program.name}"
@@ -61,6 +68,6 @@ class StudentModule(models.Model):
     class Meta:
         unique_together = ('user', 'module')
 
-        def __str__(self):
-            status = 'Aktiv' if self.is_active else 'Inaktiv'
-            return f"{self.user.username} - {self.module.name} ({status})"
+    def __str__(self):
+        status = 'Aktiv' if self.is_active else 'Inaktiv'
+        return f"{self.user.username} - {self.module.name} ({status})"

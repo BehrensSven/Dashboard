@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import News, Module, StudentModule
+from .models import News, Module, StudentModule, UserStudyProgram
+from datetime import date
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -63,3 +64,38 @@ class CompletedModuleSerializer(serializers.ModelSerializer):
     class Meta:
         model = StudentModule
         fields = ['module_name', 'module_description', 'grade', 'completion_date']
+        
+
+class StudentProgressSerializer(serializers.Serializer):
+    total_modules = serializers.IntegerField()
+    modules_passed = serializers.IntegerField()
+    time_studied_days = serializers.IntegerField()
+    standard_duration_days = serializers.IntegerField()
+
+    def to_representation(self, user):
+        try:
+            user_study_program = UserStudyProgram.objects.get(user=user)
+        except UserStudyProgram.DoesNotExist:
+            return {
+                'error': 'Der Benutzer ist in keinem Studiengang eingeschrieben.'
+            }
+
+        study_program = user_study_program.study_program
+
+        total_modules = Module.objects.filter(study_programs=study_program).count()
+
+        modules_passed = StudentModule.objects.filter(
+            user=user, is_active=False, grade__isnull=False
+        ).count()
+
+        enrollment_date = user_study_program.enrollment_date
+        time_studied_days = (date.today() - enrollment_date).days
+
+        standard_duration_days = user_study_program.time_model * 365
+
+        return {
+            'total_modules': total_modules,
+            'modules_passed': modules_passed,
+            'time_studied_days': time_studied_days,
+            'standard_duration_days': standard_duration_days,
+        }
