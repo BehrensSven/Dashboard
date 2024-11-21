@@ -1,15 +1,10 @@
 from django.contrib import admin
-from .models import News, MyModel, Semester, StudyProgram, Module, UserStudyProgram, StudentModule
+from .models import News, Semester, StudyProgram, Module, UserStudyProgram, StudentModule
 
 @admin.register(News)
 class NewsAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_at', 'updated_at')
     search_fields = ('title', 'content')
-
-@admin.register(MyModel)
-class MyModelAdmin(admin.ModelAdmin):
-    list_display = ('name',)
-    search_fields = ('name', 'description')
 
 @admin.register(Semester)
 class SemesterAdmin(admin.ModelAdmin):

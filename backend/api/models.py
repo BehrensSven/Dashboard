@@ -2,13 +2,6 @@ from django.db import models
 from .enum import NewsTypes
 from django.contrib.auth.models import User 
 
-class MyModel(models.Model):
-    name = models.CharField(max_length=100)
-    description = models.TextField()
-
-    def __str__(self):
-        return self.name
-
 class News(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
