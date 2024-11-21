@@ -6,7 +6,7 @@
           <li><a href="#news-section">Dashboard</a></li>
           <li><a href="#course-section">Kurse</a></li>
           <li><a href="#grade-chart-section">News</a></li>
-          <li><a href="#section4">Studium</a></li>
+          <li><a href="#student-progress-section">Studium</a></li>
           <li class="spacer"></li>
           <li class="logout-button"><button @click="logout">Logout</button></li>
         </ul>
@@ -24,7 +24,9 @@
         <section id="grade-chart-section" class="dashboard-tile">
           <GradesChartComponent />
         </section>
-        <section id="section4" class="dashboard-tile">Section 4</section>
+        <section id="student-progress-section" class="dashboard-tile">
+          <StudentProgressComponente />
+        </section>
       </div>
     </main>
 
@@ -34,7 +36,7 @@
           <li><a href="#news-section">News</a></li>
           <li><a href="#course-section">Course</a></li>
           <li><a href="#grade-chart-section">Grade</a></li>
-          <li><a href="#section4">Section 4</a></li>
+          <li><a href="#student-progress-section">Progress</a></li>
         </ul>
       </nav>
     </footer>
@@ -46,6 +48,7 @@ import { useRouter } from 'vue-router';
 import NewsComponent from './NewsComponent.vue';
 import CourseComponent from './CourseComponent.vue';
 import GradesChartComponent from './GradesChartComponent.vue';
+import StudentProgressComponente from './StudentProgressComponente.vue';
 
 const router = useRouter();
 
@@ -173,15 +176,11 @@ footer nav ul li a:hover {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
-#news-section {
-  background-color: #D9D9D9;
-}
 
-#course-section {
-  background-color: #D9D9D9;
-}
-
-#grade-chart-section{
+#student-progress-section,
+ #grade-chart-section,
+ #course-section,
+ #news-section {
   background-color: #D9D9D9;
 }
 </style>
