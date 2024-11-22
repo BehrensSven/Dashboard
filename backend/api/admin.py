@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import News, Semester, StudyProgram, Module, UserStudyProgram, StudentModule
+from .models import News, Semester, StudyProgram, Module, UserStudyProgram, StudentModule, Appointment
 
 @admin.register(News)
 class NewsAdmin(admin.ModelAdmin):
@@ -34,3 +34,13 @@ class StudentModuleAdmin(admin.ModelAdmin):
     list_display = ('user', 'module', 'is_active')
     list_filter = ('is_active', 'module')
     search_fields = ('user__username', 'module__name')
+    
+@admin.register(Appointment)
+class AppointmentAdmin(admin.ModelAdmin):
+    list_display = ('title', 'scheduled_at', 'display_users')
+    search_fields = ('title', 'description')
+    list_filter = ('scheduled_at',)
+
+    def display_users(self, obj):
+        return ", ".join([user.username for user in obj.users.all()])
+    display_users.short_description = 'Benutzer'

@@ -3,9 +3,10 @@ from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.exceptions import PermissionDenied
-from .serializers import UserSerializer, NewsSerializer, ModuleSerializer, CompletedModuleSerializer, StudentProgressSerializer
+from .serializers import UserSerializer, NewsSerializer, ModuleSerializer, CompletedModuleSerializer, StudentProgressSerializer, AppointmentSerializer
 from django.contrib.auth.models import User
-from .models import News, StudentModule, UserStudyProgram
+from .models import News, StudentModule, UserStudyProgram, Appointment
+from .permissions import IsOwnerOrAdmin
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -61,3 +62,25 @@ class NewsViewSet(viewsets.ModelViewSet):
     queryset = News.objects.all().order_by('-created_at')
     serializer_class = NewsSerializer
     permission_classes = [AllowAny]
+
+
+class AppointmentViewSet(viewsets.ModelViewSet):
+    serializer_class = AppointmentSerializer
+    permission_classes = [IsAuthenticated, IsOwnerOrAdmin]
+
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_staff:
+            return Appointment.objects.all()
+        else:
+            return Appointment.objects.filter(users=user)
+
+    def perform_create(self, serializer):
+        serializer.save()
+        
+    @action(detail=False, methods=['get'], url_path='appointments')
+    def appointments(self, request):
+        user = request.user
+        appointments = Appointment.objects.filter(users=user)
+        serializer = AppointmentSerializer(appointments, many=True)
+        return Response(serializer.data)

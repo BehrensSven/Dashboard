@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import News, Module, StudentModule, UserStudyProgram
+from .models import News, Module, StudentModule, UserStudyProgram, Appointment
 from datetime import date
 
 class UserSerializer(serializers.ModelSerializer):
@@ -99,3 +99,24 @@ class StudentProgressSerializer(serializers.Serializer):
             'time_studied_days': time_studied_days,
             'standard_duration_days': standard_duration_days,
         }
+
+class AppointmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Appointment
+        fields = ['id', 'title', 'description', 'scheduled_at', 'users']
+        read_only_fields = []
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        request = self.context.get('request', None)
+        if request and not request.user.is_staff:
+            self.fields['users'].read_only = True
+
+    def create(self, validated_data):
+        appointment = super().create(validated_data)
+        request = self.context.get('request', None)
+        if request and not request.user.is_staff:
+            appointment.users.add(request.user)
+        elif 'users' in self.initial_data:
+            appointment.users.set(self.initial_data.get('users'))
+        return appointment

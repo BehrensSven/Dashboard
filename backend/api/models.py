@@ -64,3 +64,14 @@ class StudentModule(models.Model):
     def __str__(self):
         status = 'Aktiv' if self.is_active else 'Inaktiv'
         return f"{self.user.username} - {self.module.name} ({status})"
+
+
+
+class Appointment(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField(blank=True)
+    scheduled_at = models.DateTimeField()
+    users = models.ManyToManyField(User, related_name='appointments')
+
+    def __str__(self):
+        return f"{self.title} on {self.scheduled_at}"
