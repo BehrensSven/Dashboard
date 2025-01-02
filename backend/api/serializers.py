@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
+from .enum import AppointmentCategory
 from .models import News, Module, StudentModule, UserStudyProgram, Appointment
 from datetime import date
 
@@ -101,9 +102,11 @@ class StudentProgressSerializer(serializers.Serializer):
         }
 
 class AppointmentSerializer(serializers.ModelSerializer):
+    category = serializers.ChoiceField(choices=AppointmentCategory.choices, default=AppointmentCategory.PERSONAL)
+
     class Meta:
         model = Appointment
-        fields = ['id', 'title', 'description', 'scheduled_at', 'users']
+        fields = ['id', 'title', 'description', 'scheduled_at', 'users', 'category']
         read_only_fields = []
 
     def __init__(self, *args, **kwargs):
@@ -120,3 +123,7 @@ class AppointmentSerializer(serializers.ModelSerializer):
         elif 'users' in self.initial_data:
             appointment.users.set(self.initial_data.get('users'))
         return appointment
+
+    def update(self, instance, validated_data):
+        instance.category = validated_data.get('category', instance.category)
+        return super().update(instance, validated_data)

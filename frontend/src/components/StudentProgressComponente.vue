@@ -48,7 +48,6 @@
       });
       progress.value = response.data;
   
-      // Berechne die Prozentsätze
       if (progress.value.total_modules > 0) {
         modulesCompletedPercentage.value =
           (progress.value.modules_passed / progress.value.total_modules) * 100;

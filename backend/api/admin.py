@@ -37,9 +37,9 @@ class StudentModuleAdmin(admin.ModelAdmin):
     
 @admin.register(Appointment)
 class AppointmentAdmin(admin.ModelAdmin):
-    list_display = ('title', 'scheduled_at', 'display_users')
+    list_display = ('title', 'scheduled_at', 'display_users', 'category')
     search_fields = ('title', 'description')
-    list_filter = ('scheduled_at',)
+    list_filter = ('scheduled_at','category')
 
     def display_users(self, obj):
         return ", ".join([user.username for user in obj.users.all()])

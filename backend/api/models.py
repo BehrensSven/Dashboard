@@ -1,5 +1,5 @@
 from django.db import models
-from .enum import NewsTypes
+from .enum import NewsTypes, AppointmentCategory
 from django.contrib.auth.models import User 
 
 class News(models.Model):
@@ -72,6 +72,13 @@ class Appointment(models.Model):
     description = models.TextField(blank=True)
     scheduled_at = models.DateTimeField()
     users = models.ManyToManyField(User, related_name='appointments')
+    
+    category = models.CharField(
+        max_length=4,
+        choices=AppointmentCategory.choices,
+        default=AppointmentCategory.PERSONAL,
+    )
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.title} on {self.scheduled_at}"
+        return f"{self.title} on {self.scheduled_at} ({self.get_category_display()})"
