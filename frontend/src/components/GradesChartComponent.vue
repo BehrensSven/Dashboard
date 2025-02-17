@@ -2,63 +2,60 @@
   <div>
     <h2>Notenverlauf</h2>
     <div style="height: 400px;">
+      <!-- Canvas element for rendering the chart -->
       <canvas ref="chartCanvas"></canvas>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import Chart from 'chart.js/auto'
-import axios from 'axios'
-import { BASE_URL } from '../config'
+import { ref, onMounted } from 'vue';
+import Chart from 'chart.js/auto';
+import axios from 'axios';
+import { BASE_URL } from '../config';
 
-const chartCanvas = ref(null)
+const chartCanvas = ref(null);
 
+// Extract user ID from the JWT token
 const getUserIdFromToken = (token) => {
-  const base64Url = token.split('.')[1]
-  const base64 = base64Url.replace('-', '+').replace('_', '/')
-  const decodedData = JSON.parse(window.atob(base64))
-  return decodedData.user_id
-}
+  const base64Url = token.split('.')[1];
+  const base64 = base64Url.replace('-', '+').replace('_', '/');
+  const decodedData = JSON.parse(window.atob(base64));
+  return decodedData.user_id;
+};
 
+// Fetch completed modules for the user
 const fetchCompletedModules = async (userId) => {
-  const token = localStorage.getItem('access_token')
-
+  const token = localStorage.getItem('access_token');
   try {
     const response = await axios.get(`${BASE_URL}/api/users/${userId}/completed-modules/`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
-    })
-    return response.data
+    });
+    return response.data;
   } catch (error) {
-    console.error('Error when retrieving the completed modules:', error)
-    return []
+    console.error('Error when retrieving the completed modules:', error);
+    return [];
   }
-}
+};
 
+// Process the fetched data to format it for Chart.js
 const processChartData = (data) => {
-  data.sort((a, b) => new Date(a.completion_date) - new Date(b.completion_date))
-
-  const labels = []
-  const grades = []
-  const cumulativeAverages = []
-
-  let totalGrades = 0
-
+  data.sort((a, b) => new Date(a.completion_date) - new Date(b.completion_date));
+  const labels = [];
+  const grades = [];
+  const cumulativeAverages = [];
+  let totalGrades = 0;
   data.forEach((item, index) => {
-    const date = new Date(item.completion_date)
-    const formattedDate = date.toLocaleDateString('de-DE')
-
-    labels.push(formattedDate)
-    grades.push(item.grade)
-
-    totalGrades += parseFloat(item.grade)
-    const cumulativeAverage = (totalGrades / (index + 1)).toFixed(2)
-    cumulativeAverages.push(cumulativeAverage)
-  })
-
+    const date = new Date(item.completion_date);
+    const formattedDate = date.toLocaleDateString('de-DE');
+    labels.push(formattedDate);
+    grades.push(item.grade);
+    totalGrades += parseFloat(item.grade);
+    const cumulativeAverage = (totalGrades / (index + 1)).toFixed(2);
+    cumulativeAverages.push(cumulativeAverage);
+  });
   return {
     labels: labels,
     datasets: [
@@ -79,18 +76,16 @@ const processChartData = (data) => {
         tension: 0.1
       }
     ]
-  }
-}
+  };
+};
 
 onMounted(async () => {
-  const token = localStorage.getItem('access_token')
-  const userId = getUserIdFromToken(token)
-  const data = await fetchCompletedModules(userId)
-
+  const token = localStorage.getItem('access_token');
+  const userId = getUserIdFromToken(token);
+  const data = await fetchCompletedModules(userId);
   if (data && data.length > 0) {
-    const chartDataProcessed = processChartData(data)
-
-    const ctx = chartCanvas.value.getContext('2d')
+    const chartDataProcessed = processChartData(data);
+    const ctx = chartCanvas.value.getContext('2d');
     new Chart(ctx, {
       type: 'line',
       data: chartDataProcessed,
@@ -119,9 +114,9 @@ onMounted(async () => {
           }
         }
       }
-    })
+    });
   } 
-})
+});
 </script>
 
 <style scoped>

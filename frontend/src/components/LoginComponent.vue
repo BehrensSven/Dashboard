@@ -17,30 +17,33 @@
 import { ref } from 'vue';
 import axios from 'axios';
 import { useRouter } from 'vue-router';
-import { BASE_URL } from '../config'
+import { BASE_URL } from '../config';
 
 const username = ref('');
 const password = ref('');
 const errorMessage = ref('');
 const router = useRouter();
 
+// Function to handle user login
 const login = () => {
-      axios.post(`${BASE_URL}/api/token/`, { username: username.value, password: password.value })
-        .then(response => {
-          if (response.data.access) {
-            localStorage.setItem('access_token', response.data.access);
-            localStorage.setItem('refresh_token', response.data.refresh);
-            router.push('/dashboard');
-          } else {
-            console.error('No access token received');
-            errorMessage.value = 'Login failed. Please try again.';
-          }
-        })
-        .catch(error => {
-          console.error('Login failed:', error);
-          errorMessage.value = 'Invalid username or password.';
-        });
-    };
+  axios.post(`${BASE_URL}/api/token/`, { username: username.value, password: password.value })
+    .then(response => {
+      if (response.data.access) {
+        localStorage.setItem('access_token', response.data.access);
+        localStorage.setItem('refresh_token', response.data.refresh);
+        router.push('/dashboard');
+      } else {
+        console.error('No access token received');
+        errorMessage.value = 'Login failed. Please try again.';
+      }
+    })
+    .catch(error => {
+      console.error('Login failed:', error);
+      errorMessage.value = 'Invalid username or password.';
+    });
+};
+
+// Navigate to the registration page
 const goToRegister = () => {
   router.push('/register');
 };

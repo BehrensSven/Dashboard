@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Header with navigation links and logout button -->
     <header>
       <nav>
         <ul>
@@ -14,6 +15,7 @@
       </nav>
     </header>
 
+    <!-- Main content grid with different sections -->
     <main>
       <div class="dashboard-grid">
         <section id="news-section" class="dashboard-tile">
@@ -34,6 +36,7 @@
       </div>
     </main>
 
+    <!-- Footer with navigation links -->
     <footer>
       <nav>
         <ul>
@@ -58,6 +61,7 @@ import CalendarComponent from './CalendarComponent.vue';
 
 const router = useRouter();
 
+// Logout function: remove tokens and navigate to the login page
 const logout = () => {
   localStorage.removeItem('accessToken');
   localStorage.removeItem('refreshToken');
@@ -182,12 +186,11 @@ footer nav ul li a:hover {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
-
 #student-progress-section,
- #grade-chart-section,
- #course-section,
- #news-section
- #calendar-section {
+#grade-chart-section,
+#course-section,
+#news-section,
+#calendar-section {
   background-color: #D9D9D9;
 }
 </style>

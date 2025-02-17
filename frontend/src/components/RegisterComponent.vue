@@ -17,13 +17,14 @@
 import { ref } from 'vue';
 import axios from 'axios';
 import { useRouter } from 'vue-router';
-import { BASE_URL } from '../config'
+import { BASE_URL } from '../config';
 
 const username = ref('');
 const email = ref('');
 const password = ref('');
 const router = useRouter();
 
+// Register new user via API
 const register = () => {
   axios.post(`${BASE_URL}/api/users/`, { username: username.value, email: email.value, password: password.value })
     .then(() => {
@@ -34,6 +35,7 @@ const register = () => {
     });
 };
 
+// Navigate back to the login page
 const goToLogin = () => {
   router.push('/login');
 };

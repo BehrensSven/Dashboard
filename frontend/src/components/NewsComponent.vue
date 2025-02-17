@@ -1,8 +1,10 @@
 <template>
   <div class="news-container">
+    <!-- Display list of news items if available -->
     <div v-if="news.length">
       <div v-for="item in news" :key="item.id" class="news-item">
         <div>
+          <!-- Display image based on news type -->
           <img :src="getImageUrl(item.type)" alt="News Bild" class="news-image">
         </div>
         <div class="text">
@@ -19,13 +21,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import axios from 'axios'
-import { BASE_URL } from '../config'
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+import { BASE_URL } from '../config';
 
+const news = ref([]);
 
-const news = ref([])
-
+// Fetch news items from the API
 const fetchNews = async () => {
   const token = localStorage.getItem('access_token');
   try {
@@ -34,12 +36,13 @@ const fetchNews = async () => {
         Authorization: `Bearer ${token}`
       }
     });
-    news.value = response.data
+    news.value = response.data;
   } catch (error) {
-    console.error("Fehler beim Laden der News:", error)
+    console.error("Error loading news:", error);
   }
-}
+};
 
+// Return appropriate image URL based on the news type
 const getImageUrl = (type) => {
   switch (type) {
     case 'info':
@@ -49,10 +52,11 @@ const getImageUrl = (type) => {
     case 'support':
       return `${BASE_URL}/static/support.svg`;
     default:
+      return '';
   }
-}
+};
 
-onMounted(fetchNews)
+onMounted(fetchNews);
 </script>
 
 <style scoped>

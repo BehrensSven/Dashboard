@@ -1,5 +1,6 @@
 <template>
   <div class="course-container">
+    <!-- Toggle to filter between active and completed courses -->
     <div class="toggle-container">
       <label class="switch">
         <input type="checkbox" v-model="isActive" @change="filterCourses">
@@ -8,10 +9,11 @@
       <span class="option">{{ isActive ? 'Bestanden' : 'Aktiv' }}</span>
     </div>
 
+    <!-- Loading and error messages -->
     <p v-if="loading">Loading courses...</p>
-    
     <p v-if="error">{{ error }}</p>
-    
+
+    <!-- List of courses -->
     <div class="course-list" v-if="filteredCourses && filteredCourses.length">
       <div 
         v-for="course in filteredCourses" 
@@ -21,7 +23,6 @@
         <button class="course-button">{{ course?.name }}</button>
       </div>
     </div>
-
     <p v-else>No courses available</p>
   </div>
 </template>
@@ -37,6 +38,7 @@ const loading = ref(true);
 const error = ref('');
 const isActive = ref(false);
 
+// Fetch courses from the API
 const fetchCourses = async () => {
   const token = localStorage.getItem('access_token');
 
@@ -55,6 +57,7 @@ const fetchCourses = async () => {
   }
 };
 
+// Filter courses based on their active status
 const filterCourses = () => {
   if (isActive.value) {
     filteredCourses.value = courses.value.filter(course => !course.is_active);
