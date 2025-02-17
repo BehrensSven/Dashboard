@@ -2,6 +2,9 @@ from django.db import models
 from .enum import NewsTypes, AppointmentCategory
 from django.contrib.auth.models import User 
 
+# --- Model Definitions ---
+# Simple models for News, StudyProgram, Semester, Module, UserStudyProgram, StudentModule, and Appointment
+
 class News(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
@@ -59,13 +62,11 @@ class StudentModule(models.Model):
     completion_date = models.DateField(null=True, blank=True)
 
     class Meta:
-        unique_together = ('user', 'module')
+        unique_together = ('user', 'module')  # Ensure one record per user-module pair
 
     def __str__(self):
         status = 'Aktiv' if self.is_active else 'Inaktiv'
         return f"{self.user.username} - {self.module.name} ({status})"
-
-
 
 class Appointment(models.Model):
     title = models.CharField(max_length=255)
@@ -81,4 +82,5 @@ class Appointment(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
+        # Return appointment details with formatted category
         return f"{self.title} on {self.scheduled_at} ({self.get_category_display()})"

@@ -5,6 +5,8 @@ from django.contrib.auth import authenticate
 from rest_framework.permissions import AllowAny
 from rest_framework_simplejwt.tokens import RefreshToken
 
+# --- Login API View ---
+
 class LoginView(APIView):
     permission_classes = [AllowAny]
 
@@ -14,6 +16,7 @@ class LoginView(APIView):
         user = authenticate(request, username=username, password=password)
 
         if user is not None:
+            # Generate JWT tokens after successful authentication
             refresh = RefreshToken.for_user(user)
             return Response({
                 'refresh': str(refresh),

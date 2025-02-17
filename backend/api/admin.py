@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import News, Semester, StudyProgram, Module, UserStudyProgram, StudentModule, Appointment
 
+# --- Admin Configuration ---
+
 @admin.register(News)
 class NewsAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_at', 'updated_at')
@@ -28,7 +30,6 @@ class UserStudyProgramAdmin(admin.ModelAdmin):
     list_display = ('user', 'study_program')
     search_fields = ('user__username', 'study_program__name')
 
-
 @admin.register(StudentModule)
 class StudentModuleAdmin(admin.ModelAdmin):
     list_display = ('user', 'module', 'is_active')
@@ -42,5 +43,6 @@ class AppointmentAdmin(admin.ModelAdmin):
     list_filter = ('scheduled_at','category')
 
     def display_users(self, obj):
+        # Return comma-separated list of usernames
         return ", ".join([user.username for user in obj.users.all()])
     display_users.short_description = 'Benutzer'
