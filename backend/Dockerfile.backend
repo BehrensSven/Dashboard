@@ -1,24 +1,24 @@
-# Basis-Image: Verwende ein leichtgewichtiges Python-Image
+# Base image: Use a lightweight Python image
 FROM python:3.11-slim
 
-# Arbeitsverzeichnis festlegen
+# Set working directory
 WORKDIR /app
 
-# Systemabhängigkeiten installieren
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Abhängigkeiten kopieren und installieren
-# Erstelle zunächst eine requirements.txt (falls noch nicht vorhanden) mit allen Python-Paketen
+# Copy and install dependencies
+# First, create a requirements.txt (if not already present) with all Python packages
 COPY requirements.txt requirements.txt
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Restlichen Code kopieren
+# Copy the remaining code
 COPY . .
 
-# Port freigeben (z. B. 8000 für Django)
+# Expose port (e.g., 8000 for Django)
 EXPOSE 8000
 
-# Command: Starte den Django-Server (Beachte: Für den produktiven Einsatz empfiehlt sich gunicorn)
+# Command: Start the Django server (Note: For production use, gunicorn is recommended)
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
