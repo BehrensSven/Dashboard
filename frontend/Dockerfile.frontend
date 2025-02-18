@@ -1,0 +1,18 @@
+# Basis-Image: Verwende ein leichtgewichtiges Node-Image
+FROM node:16-alpine
+
+# Arbeitsverzeichnis festlegen
+WORKDIR /app
+
+# Package-Dateien kopieren und Abhängigkeiten installieren
+COPY package*.json ./
+RUN npm install
+
+# Restlichen Code kopieren
+COPY . .
+
+# Port freigeben (Standard-Port für Vue ist 8080)
+EXPOSE 8080
+
+# Startbefehl: Starte den Entwicklungsserver
+CMD ["npm", "run", "serve"]
