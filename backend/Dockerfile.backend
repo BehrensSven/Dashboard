@@ -22,3 +22,6 @@ EXPOSE 8000
 
 # Command: Start the Django server (Note: For production use, gunicorn is recommended)
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+
+# Use the entry point script to perform migrations and fixture load
+ENTRYPOINT ["./entrypoint.sh"]
