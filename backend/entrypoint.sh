@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-python manage.py makemigration
+python manage.py makemigrations
 
 # Führe Datenbankmigrationen durch
 python manage.py migrate --noinput
