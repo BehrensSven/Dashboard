@@ -4,11 +4,11 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#news-section">Dashboard</a></li>
+          <li><a href="#news-section">News</a></li>
           <li><a href="#course-section">Kurse</a></li>
-          <li><a href="#grade-chart-section">News</a></li>
-          <li><a href="#student-progress-section">Studium</a></li>
-          <li><a href="#calendar-section">Calendar</a></li>
+          <li><a href="#grade-chart-section">Notenverlauf</a></li>
+          <li><a href="#student-progress-section">Studienfortschritt</a></li>
+          <li><a href="#calendar-section">Kalender</a></li>
           <li class="spacer"></li>
           <li class="logout-button"><button @click="logout">Logout</button></li>
         </ul>
@@ -41,10 +41,10 @@
       <nav>
         <ul>
           <li><a href="#news-section">News</a></li>
-          <li><a href="#course-section">Course</a></li>
-          <li><a href="#grade-chart-section">Grade</a></li>
-          <li><a href="#student-progress-section">Progress</a></li>
-          <li><a href="#calendar-section">Progress</a></li>
+          <li><a href="#course-section">Kurse</a></li>
+          <li><a href="#grade-chart-section">Notenverlauf</a></li>
+          <li><a href="#student-progress-section">Studienfortschritt</a></li>
+          <li><a href="#calendar-section">Kalender</a></li>
         </ul>
       </nav>
     </footer>

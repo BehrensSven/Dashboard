@@ -1,1 +1,399 @@
-[{"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2024-11-13T09:38:05.314Z", "user": 1, "content_type": 8, "object_id": "1", "object_repr": "News1", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2024-11-13T09:38:10.523Z", "user": 1, "content_type": 8, "object_id": "2", "object_repr": "news2", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2024-11-13T09:38:16.421Z", "user": 1, "content_type": 8, "object_id": "3", "object_repr": "news3", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2024-11-13T09:38:20.829Z", "user": 1, "content_type": 8, "object_id": "4", "object_repr": "news4", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2024-11-13T09:38:25.356Z", "user": 1, "content_type": 8, "object_id": "5", "object_repr": "news5", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 6, "fields": {"action_time": "2024-11-13T09:39:29.757Z", "user": 1, "content_type": 10, "object_id": "1", "object_repr": "study programm 1", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 7, "fields": {"action_time": "2024-11-13T09:39:37.334Z", "user": 1, "content_type": 10, "object_id": "2", "object_repr": "study programm 2", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 8, "fields": {"action_time": "2024-11-13T09:39:54.547Z", "user": 1, "content_type": 12, "object_id": "1", "object_repr": "svenb - study programm 1", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 9, "fields": {"action_time": "2024-11-13T09:40:45.640Z", "user": 1, "content_type": 9, "object_id": "1", "object_repr": "semester 1", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 10, "fields": {"action_time": "2024-11-13T09:41:03.724Z", "user": 1, "content_type": 9, "object_id": "2", "object_repr": "semester 2", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 11, "fields": {"action_time": "2024-11-13T09:44:27.308Z", "user": 1, "content_type": 11, "object_id": "1", "object_repr": "modul 1", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 12, "fields": {"action_time": "2024-11-13T09:44:38.438Z", "user": 1, "content_type": 11, "object_id": "2", "object_repr": "modul 2", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 13, "fields": {"action_time": "2024-11-13T09:45:27.505Z", "user": 1, "content_type": 13, "object_id": "1", "object_repr": "svenb - modul 1 (Aktiv)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 14, "fields": {"action_time": "2024-11-13T09:45:31.249Z", "user": 1, "content_type": 13, "object_id": "2", "object_repr": "svenb - modul 2 (Aktiv)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 15, "fields": {"action_time": "2024-11-13T13:30:10.108Z", "user": 1, "content_type": 13, "object_id": "2", "object_repr": "StudentModule object (2)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Is active\", \"Grade\", \"Completion date\"]}}]"}}, {"model": "admin.logentry", "pk": 16, "fields": {"action_time": "2024-11-13T13:30:30.979Z", "user": 1, "content_type": 13, "object_id": "1", "object_repr": "StudentModule object (1)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Is active\", \"Grade\", \"Completion date\"]}}]"}}, {"model": "admin.logentry", "pk": 17, "fields": {"action_time": "2024-11-20T07:50:09.914Z", "user": 1, "content_type": 10, "object_id": "1", "object_repr": "Angewandte Künstliche Intelligenz", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Description\"]}}]"}}, {"model": "admin.logentry", "pk": 18, "fields": {"action_time": "2024-11-20T07:50:34.465Z", "user": 1, "content_type": 10, "object_id": "2", "object_repr": "Informatik", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Description\"]}}]"}}, {"model": "admin.logentry", "pk": 19, "fields": {"action_time": "2024-11-20T07:52:40.097Z", "user": 1, "content_type": 11, "object_id": "1", "object_repr": "Artificial Intelligence", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Description\"]}}]"}}, {"model": "admin.logentry", "pk": 20, "fields": {"action_time": "2024-11-20T07:53:08.165Z", "user": 1, "content_type": 11, "object_id": "2", "object_repr": "Einführung in das wissenschaftliche Arbeiten für IT und Technik", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Description\", \"Study programs\"]}}]"}}, {"model": "admin.logentry", "pk": 21, "fields": {"action_time": "2024-11-20T07:53:13.745Z", "user": 1, "content_type": 11, "object_id": "1", "object_repr": "Artificial Intelligence", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 22, "fields": {"action_time": "2024-11-20T07:53:18.107Z", "user": 1, "content_type": 11, "object_id": "2", "object_repr": "Einführung in das wissenschaftliche Arbeiten für IT und Technik", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Semester\"]}}]"}}, {"model": "admin.logentry", "pk": 23, "fields": {"action_time": "2024-11-20T07:53:51.525Z", "user": 1, "content_type": 11, "object_id": "3", "object_repr": "Einführung in die Programmierung mit Python", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 24, "fields": {"action_time": "2024-11-20T07:54:23.874Z", "user": 1, "content_type": 11, "object_id": "4", "object_repr": "Mathematik: Analysis", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 25, "fields": {"action_time": "2024-11-20T07:54:52.565Z", "user": 1, "content_type": 11, "object_id": "5", "object_repr": "Kollaboratives Arbeiten", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 26, "fields": {"action_time": "2024-11-20T07:55:28.588Z", "user": 1, "content_type": 11, "object_id": "6", "object_repr": "Statistik - Wahrscheinlichkeit und deskriptive Statistik", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 27, "fields": {"action_time": "2024-11-20T07:56:18.596Z", "user": 1, "content_type": 11, "object_id": "7", "object_repr": "Objektorientierte und funktionale Programmierung mit Python", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 28, "fields": {"action_time": "2024-11-20T07:56:45.232Z", "user": 1, "content_type": 11, "object_id": "8", "object_repr": "Mathematik: Lineare Algebra", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 29, "fields": {"action_time": "2024-11-20T07:57:11.950Z", "user": 1, "content_type": 11, "object_id": "9", "object_repr": "Interkulturelle und ethische Handlungskompetenzen", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 30, "fields": {"action_time": "2024-11-20T07:57:45.330Z", "user": 1, "content_type": 11, "object_id": "10", "object_repr": "Statistik: Schließende Statistik", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 31, "fields": {"action_time": "2024-11-20T07:58:05.118Z", "user": 1, "content_type": 11, "object_id": "11", "object_repr": "Cloud Computing", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 32, "fields": {"action_time": "2024-11-20T07:59:54.112Z", "user": 1, "content_type": 13, "object_id": "1", "object_repr": "StudentModule object (1)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 33, "fields": {"action_time": "2024-11-20T08:00:39.675Z", "user": 1, "content_type": 13, "object_id": "3", "object_repr": "StudentModule object (3)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 34, "fields": {"action_time": "2024-11-20T08:01:05.408Z", "user": 1, "content_type": 13, "object_id": "4", "object_repr": "StudentModule object (4)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 35, "fields": {"action_time": "2024-11-20T08:01:57.852Z", "user": 1, "content_type": 13, "object_id": "5", "object_repr": "StudentModule object (5)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 36, "fields": {"action_time": "2024-11-20T08:02:15.053Z", "user": 1, "content_type": 13, "object_id": "6", "object_repr": "StudentModule object (6)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 37, "fields": {"action_time": "2024-11-20T08:02:39.817Z", "user": 1, "content_type": 13, "object_id": "3", "object_repr": "StudentModule object (3)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"}}, {"model": "admin.logentry", "pk": 38, "fields": {"action_time": "2024-11-20T08:02:44.289Z", "user": 1, "content_type": 13, "object_id": "4", "object_repr": "StudentModule object (4)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"}}, {"model": "admin.logentry", "pk": 39, "fields": {"action_time": "2024-11-20T08:02:49.690Z", "user": 1, "content_type": 13, "object_id": "5", "object_repr": "StudentModule object (5)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"}}, {"model": "admin.logentry", "pk": 40, "fields": {"action_time": "2024-11-20T08:03:01.066Z", "user": 1, "content_type": 13, "object_id": "6", "object_repr": "StudentModule object (6)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"}}, {"model": "admin.logentry", "pk": 41, "fields": {"action_time": "2024-11-20T08:03:31.828Z", "user": 1, "content_type": 13, "object_id": "7", "object_repr": "StudentModule object (7)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 42, "fields": {"action_time": "2024-11-20T08:03:46.922Z", "user": 1, "content_type": 13, "object_id": "8", "object_repr": "StudentModule object (8)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 43, "fields": {"action_time": "2024-11-20T08:04:27.088Z", "user": 1, "content_type": 13, "object_id": "9", "object_repr": "StudentModule object (9)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 44, "fields": {"action_time": "2024-11-20T08:05:48.370Z", "user": 1, "content_type": 8, "object_id": "1", "object_repr": "Neuer Bachelor: Data Science und Machine Learning", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"}}, {"model": "admin.logentry", "pk": 45, "fields": {"action_time": "2024-11-20T08:07:51.039Z", "user": 1, "content_type": 8, "object_id": "2", "object_repr": "Anmeldefrist für das Sommersemester", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Content\"]}}]"}}, {"model": "admin.logentry", "pk": 46, "fields": {"action_time": "2024-11-20T08:08:12.575Z", "user": 1, "content_type": 8, "object_id": "3", "object_repr": "Wartungsarbeiten am Hochschulnetzwerk", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Content\", \"Type\"]}}]"}}, {"model": "admin.logentry", "pk": 47, "fields": {"action_time": "2024-11-20T08:08:24.218Z", "user": 1, "content_type": 8, "object_id": "4", "object_repr": "Sicherheitsupdate für Hochschulaccounts erforderlich", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Content\", \"Type\"]}}]"}}, {"model": "admin.logentry", "pk": 48, "fields": {"action_time": "2024-11-20T08:08:46.704Z", "user": 1, "content_type": 8, "object_id": "5", "object_repr": "Beratungsangebot bei technischen Problemen", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Content\", \"Type\"]}}]"}}, {"model": "admin.logentry", "pk": 49, "fields": {"action_time": "2024-11-20T08:10:52.260Z", "user": 1, "content_type": 13, "object_id": "10", "object_repr": "StudentModule object (10)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 50, "fields": {"action_time": "2024-11-20T08:11:45.809Z", "user": 1, "content_type": 13, "object_id": "10", "object_repr": "StudentModule object (10)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"}}, {"model": "admin.logentry", "pk": 51, "fields": {"action_time": "2024-11-21T09:31:18.962Z", "user": 1, "content_type": 12, "object_id": "1", "object_repr": "svenb - Angewandte Künstliche Intelligenz", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Enrollment date\", \"Time model\"]}}]"}}, {"model": "admin.logentry", "pk": 52, "fields": {"action_time": "2024-11-22T08:45:16.192Z", "user": 1, "content_type": 14, "object_id": "1", "object_repr": "Learning with Tim on 2024-11-30 08:44:59+00:00", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 53, "fields": {"action_time": "2024-11-22T08:45:29.958Z", "user": 1, "content_type": 14, "object_id": "2", "object_repr": "Learning with Tim on 2024-11-24 08:45:28+00:00", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 54, "fields": {"action_time": "2024-11-25T08:22:33.843Z", "user": 1, "content_type": 14, "object_id": "2", "object_repr": "Learning with Tim on 2024-11-24 08:45:28+00:00 (Organisation)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"}}, {"model": "admin.logentry", "pk": 55, "fields": {"action_time": "2024-11-25T08:24:28.433Z", "user": 1, "content_type": 14, "object_id": "2", "object_repr": "Mathe Klausur on 2024-11-24 08:45:28+00:00 (Organisation)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Description\"]}}]"}}, {"model": "admin.logentry", "pk": 56, "fields": {"action_time": "2024-11-25T08:24:37.141Z", "user": 1, "content_type": 14, "object_id": "2", "object_repr": "Mathe Klausur on 2024-11-24 08:45:28+00:00 (Klausur)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"}}, {"model": "admin.logentry", "pk": 57, "fields": {"action_time": "2024-11-25T08:25:23.385Z", "user": 1, "content_type": 14, "object_id": "3", "object_repr": "Besprechung mit Frau Lemke on 2024-11-25 08:25:21+00:00 (Organisation)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "auth.permission", "pk": 1, "fields": {"name": "Can add log entry", "content_type": 1, "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 2, "fields": {"name": "Can change log entry", "content_type": 1, "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 3, "fields": {"name": "Can delete log entry", "content_type": 1, "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 4, "fields": {"name": "Can view log entry", "content_type": 1, "codename": "view_logentry"}}, {"model": "auth.permission", "pk": 5, "fields": {"name": "Can add permission", "content_type": 2, "codename": "add_permission"}}, {"model": "auth.permission", "pk": 6, "fields": {"name": "Can change permission", "content_type": 2, "codename": "change_permission"}}, {"model": "auth.permission", "pk": 7, "fields": {"name": "Can delete permission", "content_type": 2, "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 8, "fields": {"name": "Can view permission", "content_type": 2, "codename": "view_permission"}}, {"model": "auth.permission", "pk": 9, "fields": {"name": "Can add group", "content_type": 3, "codename": "add_group"}}, {"model": "auth.permission", "pk": 10, "fields": {"name": "Can change group", "content_type": 3, "codename": "change_group"}}, {"model": "auth.permission", "pk": 11, "fields": {"name": "Can delete group", "content_type": 3, "codename": "delete_group"}}, {"model": "auth.permission", "pk": 12, "fields": {"name": "Can view group", "content_type": 3, "codename": "view_group"}}, {"model": "auth.permission", "pk": 13, "fields": {"name": "Can add user", "content_type": 4, "codename": "add_user"}}, {"model": "auth.permission", "pk": 14, "fields": {"name": "Can change user", "content_type": 4, "codename": "change_user"}}, {"model": "auth.permission", "pk": 15, "fields": {"name": "Can delete user", "content_type": 4, "codename": "delete_user"}}, {"model": "auth.permission", "pk": 16, "fields": {"name": "Can view user", "content_type": 4, "codename": "view_user"}}, {"model": "auth.permission", "pk": 17, "fields": {"name": "Can add content type", "content_type": 5, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 18, "fields": {"name": "Can change content type", "content_type": 5, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 19, "fields": {"name": "Can delete content type", "content_type": 5, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 20, "fields": {"name": "Can view content type", "content_type": 5, "codename": "view_contenttype"}}, {"model": "auth.permission", "pk": 21, "fields": {"name": "Can add session", "content_type": 6, "codename": "add_session"}}, {"model": "auth.permission", "pk": 22, "fields": {"name": "Can change session", "content_type": 6, "codename": "change_session"}}, {"model": "auth.permission", "pk": 23, "fields": {"name": "Can delete session", "content_type": 6, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 24, "fields": {"name": "Can view session", "content_type": 6, "codename": "view_session"}}, {"model": "auth.permission", "pk": 25, "fields": {"name": "Can add my model", "content_type": 7, "codename": "add_mymodel"}}, {"model": "auth.permission", "pk": 26, "fields": {"name": "Can change my model", "content_type": 7, "codename": "change_mymodel"}}, {"model": "auth.permission", "pk": 27, "fields": {"name": "Can delete my model", "content_type": 7, "codename": "delete_mymodel"}}, {"model": "auth.permission", "pk": 28, "fields": {"name": "Can view my model", "content_type": 7, "codename": "view_mymodel"}}, {"model": "auth.permission", "pk": 29, "fields": {"name": "Can add news", "content_type": 8, "codename": "add_news"}}, {"model": "auth.permission", "pk": 30, "fields": {"name": "Can change news", "content_type": 8, "codename": "change_news"}}, {"model": "auth.permission", "pk": 31, "fields": {"name": "Can delete news", "content_type": 8, "codename": "delete_news"}}, {"model": "auth.permission", "pk": 32, "fields": {"name": "Can view news", "content_type": 8, "codename": "view_news"}}, {"model": "auth.permission", "pk": 33, "fields": {"name": "Can add semester", "content_type": 9, "codename": "add_semester"}}, {"model": "auth.permission", "pk": 34, "fields": {"name": "Can change semester", "content_type": 9, "codename": "change_semester"}}, {"model": "auth.permission", "pk": 35, "fields": {"name": "Can delete semester", "content_type": 9, "codename": "delete_semester"}}, {"model": "auth.permission", "pk": 36, "fields": {"name": "Can view semester", "content_type": 9, "codename": "view_semester"}}, {"model": "auth.permission", "pk": 37, "fields": {"name": "Can add study program", "content_type": 10, "codename": "add_studyprogram"}}, {"model": "auth.permission", "pk": 38, "fields": {"name": "Can change study program", "content_type": 10, "codename": "change_studyprogram"}}, {"model": "auth.permission", "pk": 39, "fields": {"name": "Can delete study program", "content_type": 10, "codename": "delete_studyprogram"}}, {"model": "auth.permission", "pk": 40, "fields": {"name": "Can view study program", "content_type": 10, "codename": "view_studyprogram"}}, {"model": "auth.permission", "pk": 41, "fields": {"name": "Can add module", "content_type": 11, "codename": "add_module"}}, {"model": "auth.permission", "pk": 42, "fields": {"name": "Can change module", "content_type": 11, "codename": "change_module"}}, {"model": "auth.permission", "pk": 43, "fields": {"name": "Can delete module", "content_type": 11, "codename": "delete_module"}}, {"model": "auth.permission", "pk": 44, "fields": {"name": "Can view module", "content_type": 11, "codename": "view_module"}}, {"model": "auth.permission", "pk": 45, "fields": {"name": "Can add user study program", "content_type": 12, "codename": "add_userstudyprogram"}}, {"model": "auth.permission", "pk": 46, "fields": {"name": "Can change user study program", "content_type": 12, "codename": "change_userstudyprogram"}}, {"model": "auth.permission", "pk": 47, "fields": {"name": "Can delete user study program", "content_type": 12, "codename": "delete_userstudyprogram"}}, {"model": "auth.permission", "pk": 48, "fields": {"name": "Can view user study program", "content_type": 12, "codename": "view_userstudyprogram"}}, {"model": "auth.permission", "pk": 49, "fields": {"name": "Can add student module", "content_type": 13, "codename": "add_studentmodule"}}, {"model": "auth.permission", "pk": 50, "fields": {"name": "Can change student module", "content_type": 13, "codename": "change_studentmodule"}}, {"model": "auth.permission", "pk": 51, "fields": {"name": "Can delete student module", "content_type": 13, "codename": "delete_studentmodule"}}, {"model": "auth.permission", "pk": 52, "fields": {"name": "Can view student module", "content_type": 13, "codename": "view_studentmodule"}}, {"model": "auth.permission", "pk": 53, "fields": {"name": "Can add appointment", "content_type": 14, "codename": "add_appointment"}}, {"model": "auth.permission", "pk": 54, "fields": {"name": "Can change appointment", "content_type": 14, "codename": "change_appointment"}}, {"model": "auth.permission", "pk": 55, "fields": {"name": "Can delete appointment", "content_type": 14, "codename": "delete_appointment"}}, {"model": "auth.permission", "pk": 56, "fields": {"name": "Can view appointment", "content_type": 14, "codename": "view_appointment"}}, {"model": "auth.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$870000$WO9OwHKwZ1RSfefAgtLjOw$Jkf1eitcnYbkuZIiuaycr3pSAF7Tc3nzGux4zOtIrg8=", "last_login": "2024-12-04T09:20:09.624Z", "is_superuser": true, "username": "svenb", "first_name": "", "last_name": "", "email": "sven-behrens@hotmail.com", "is_staff": true, "is_active": true, "date_joined": "2024-11-13T08:27:28.322Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 2, "fields": {"password": "pbkdf2_sha256$870000$SFDHT2L4MBDHjE7aYJg7AL$LIzvaVAfSOZEVVjH/XlrqZqfWvnobf1vfTp9ZMhuIaU=", "last_login": "2024-11-20T09:05:52.499Z", "is_superuser": false, "username": "svenb23", "first_name": "", "last_name": "", "email": "Sven-Behrens@hotmail.com", "is_staff": false, "is_active": true, "date_joined": "2024-11-20T09:05:45.885Z", "groups": [], "user_permissions": []}}, {"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "auth", "model": "user"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "sessions", "model": "session"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "api", "model": "mymodel"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "api", "model": "news"}}, {"model": "contenttypes.contenttype", "pk": 9, "fields": {"app_label": "api", "model": "semester"}}, {"model": "contenttypes.contenttype", "pk": 10, "fields": {"app_label": "api", "model": "studyprogram"}}, {"model": "contenttypes.contenttype", "pk": 11, "fields": {"app_label": "api", "model": "module"}}, {"model": "contenttypes.contenttype", "pk": 12, "fields": {"app_label": "api", "model": "userstudyprogram"}}, {"model": "contenttypes.contenttype", "pk": 13, "fields": {"app_label": "api", "model": "studentmodule"}}, {"model": "contenttypes.contenttype", "pk": 14, "fields": {"app_label": "api", "model": "appointment"}}, {"model": "sessions.session", "pk": "f001scdcy9r8jvv0n9nibjtat27403ss", "fields": {"session_data": ".eJxVjMsOwiAQRf-FtSE8C7h07zeQYRikaiAp7cr479qkC93ec859sQjbWuM2aIlzZmcm2el3S4APajvId2i3zrG3dZkT3xV-0MGvPdPzcrh_BxVG_dbWhRKELao4FYy33hkrVQBvUGuRAyIJSh4sTk7agJNEpR1AzoW0Js_eH722N44:1tB8jQ:ip0NAwy8xj77Hhr1zHPGse9dqWB9_fcba3Gyx66YNZE", "expire_date": "2024-11-27T08:28:08.233Z"}}, {"model": "sessions.session", "pk": "z51hzxd9q7luft8pnf9nt25oxplsd508", "fields": {"session_data": ".eJxVjMsOwiAQRf-FtSE8C7h07zeQYRikaiAp7cr479qkC93ec859sQjbWuM2aIlzZmcm2el3S4APajvId2i3zrG3dZkT3xV-0MGvPdPzcrh_BxVG_dbWhRKELao4FYy33hkrVQBvUGuRAyIJSh4sTk7agJNEpR1AzoW0Js_eH722N44:1tGDiF:UEn1p2o875DBR4NEB2mUwuwYwkWjSKXHuFpS9zeuIcg", "expire_date": "2024-12-11T08:47:55.013Z"}}, {"model": "api.news", "pk": 1, "fields": {"title": "Neuer Bachelor: Data Science und Machine Learning", "content": "Ab dem nächsten Semester können Studierende den neuen Bachelor-Studiengang \"Data Science und Machine Learning\" belegen. Das interdisziplinäre Programm zielt darauf ab, Kompetenzen in Statistik, Informatik und Datenanalyse zu fördern.", "created_at": "2024-11-13T09:38:05.313Z", "updated_at": "2024-11-20T08:05:48.369Z", "type": "info"}}, {"model": "api.news", "pk": 2, "fields": {"title": "Anmeldefrist für das Sommersemester", "content": "Die Bewerbungsphase für das Sommersemester hat begonnen! Interessierte können sich bis zum 15. Januar für alle Bachelor- und Masterstudiengänge anmelden.", "created_at": "2024-11-13T09:38:10.522Z", "updated_at": "2024-11-20T08:07:51.038Z", "type": "info"}}, {"model": "api.news", "pk": 3, "fields": {"title": "Wartungsarbeiten am Hochschulnetzwerk", "content": "Am 25. November zwischen 20:00 und 02:00 Uhr finden Wartungsarbeiten am Hochschulnetzwerk statt. In dieser Zeit sind Dienste wie WLAN, E-Mail und das Online-Portal nur eingeschränkt verfügbar.", "created_at": "2024-11-13T09:38:16.421Z", "updated_at": "2024-11-20T08:08:12.574Z", "type": "warnung"}}, {"model": "api.news", "pk": 4, "fields": {"title": "Sicherheitsupdate für Hochschulaccounts erforderlich", "content": "Bitte aktualisieren Sie Ihr Passwort bis zum 30. November, um mögliche Sicherheitsrisiken zu vermeiden. Nach Ablauf der Frist wird der Zugang vorübergehend gesperrt.", "created_at": "2024-11-13T09:38:20.828Z", "updated_at": "2024-11-20T08:08:24.217Z", "type": "warnung"}}, {"model": "api.news", "pk": 5, "fields": {"title": "Beratungsangebot bei technischen Problemen", "content": "Haben Sie Schwierigkeiten mit dem Online-Portal oder anderen digitalen Diensten? Unser IT-Support ist von Montag bis Freitag, 9:00–17:00 Uhr, unter support@uni-beispiel.de oder telefonisch erreichbar.", "created_at": "2024-11-13T09:38:25.355Z", "updated_at": "2024-11-20T08:08:46.703Z", "type": "support"}}, {"model": "api.studyprogram", "pk": 1, "fields": {"name": "Angewandte Künstliche Intelligenz", "description": "Angewandte Künstliche Intelligenz ist ein praxisorientierter Studiengang, der sich auf die Entwicklung und Anwendung von KI-Technologien zur Lösung realer Probleme konzentriert. Er verbindet Informatik, maschinelles Lernen und Datenanalyse mit praktischen Anwendungen in verschiedenen Branchen. Studierende erlernen die Entwicklung intelligenter Systeme, von Sprachverarbeitung bis hin zu Robotik, und setzen sich gleichzeitig mit ethischen und gesellschaftlichen Fragestellungen der KI auseinander. Der Studiengang bereitet Absolventen auf innovative Tätigkeiten in zukunftsorientierten Bereichen wie Gesundheitswesen, Finanzen und Automatisierung vor."}}, {"model": "api.studyprogram", "pk": 2, "fields": {"name": "Informatik", "description": "Informatik ist ein Studiengang, der sich mit der Theorie, Entwicklung und Anwendung von Software- und Hardware-Systemen befasst. Der Fokus liegt auf der Verarbeitung, Speicherung und Übertragung von Daten sowie der Lösung komplexer Probleme durch algorithmische Ansätze. Studierende erwerben fundierte Kenntnisse in Programmierung, Datenbanken, Netzwerken und Softwareentwicklung und lernen, wie IT-Systeme gestaltet und optimiert werden. Neben der Technik umfasst der Studiengang auch Themen wie IT-Sicherheit und ethische Fragen der Digitalisierung. Informatik-Absolventen sind in nahezu allen Branchen gefragt, beispielsweise in der Softwareentwicklung, der IT-Beratung oder der Forschung."}}, {"model": "api.semester", "pk": 1, "fields": {"name": "semester 1", "start_date": "2024-10-13", "end_date": "2025-03-13"}}, {"model": "api.semester", "pk": 2, "fields": {"name": "semester 2", "start_date": "2025-03-13", "end_date": "2025-10-13"}}, {"model": "api.module", "pk": 1, "fields": {"name": "Artificial Intelligence", "description": "Dieses Modul bietet einen grundlegenden Überblick über die Konzepte und Techniken der Künstlichen Intelligenz (KI). Die Studierenden lernen die historische Entwicklung, wichtige Anwendungsbereiche und zentrale Prinzipien der KI kennen. Schwerpunkte liegen auf Themen wie maschinelles Lernen, neuronale Netze und datengetriebene Entscheidungsfindung. Darüber hinaus werden ethische und gesellschaftliche Aspekte der KI behandelt. Ziel des Moduls ist es, ein solides Verständnis der KI-Grundlagen zu schaffen und die Relevanz dieser Technologie in verschiedenen Branchen zu verdeutlichen.", "semester": 1, "study_programs": [1]}}, {"model": "api.module", "pk": 2, "fields": {"name": "Einführung in das wissenschaftliche Arbeiten für IT und Technik", "description": "Dieses Modul vermittelt die Grundlagen des wissenschaftlichen Arbeitens mit einem Fokus auf die Anforderungen in den Bereichen IT und Technik. Die Studierenden erlernen Techniken zur Recherche, Strukturierung und Dokumentation wissenschaftlicher Arbeiten. Themen wie Zitierregeln, Quellenbewertung, das Formulieren von Hypothesen und die Nutzung wissenschaftlicher Literatur stehen im Mittelpunkt. Besonderer Wert wird auf die Anwendung von wissenschaftlichen Methoden und den Bezug zu technischen Fragestellungen gelegt. Ziel ist es, die Studierenden auf das Verfassen von Facharbeiten, Projektberichten und Abschlussarbeiten vorzubereiten.", "semester": 1, "study_programs": [1, 2]}}, {"model": "api.module", "pk": 3, "fields": {"name": "Einführung in die Programmierung mit Python", "description": "Dieses Modul führt die Studierenden in die Grundlagen der Programmierung ein, mit besonderem Fokus auf die Programmiersprache Python. Es werden grundlegende Konzepte wie Datentypen, Kontrollstrukturen (Schleifen und Bedingungen), Funktionen und Modularisierung vermittelt. Zusätzlich lernen die Studierenden den Umgang mit wichtigen Python-Bibliotheken, die speziell für Datenanalyse und Automatisierung genutzt werden können. Praktische Übungen und kleinere Projekte ermöglichen es, theoretisches Wissen direkt anzuwenden. Ziel des Moduls ist es, eine solide Basis in Python zu schaffen und die Studierenden auf komplexere Programmieraufgaben vorzubereiten.", "semester": 1, "study_programs": [1, 2]}}, {"model": "api.module", "pk": 4, "fields": {"name": "Mathematik: Analysis", "description": "Dieses Modul vermittelt die grundlegenden Konzepte der Analysis, die eine zentrale Rolle in der Mathematik und ihren Anwendungen spielen. Schwerpunkte sind Funktionen, Grenzwerte, Differential- und Integralrechnung sowie deren Anwendung in technischen und wissenschaftlichen Fragestellungen. Die Studierenden lernen, mathematische Probleme zu analysieren, Funktionen zu modellieren und zu optimieren sowie Integrale und Ableitungen in praktischen Kontexten anzuwenden. Ziel ist es, ein solides Verständnis der Grundlagen der Analysis zu entwickeln, um komplexere mathematische und technische Probleme lösen zu können.", "semester": 1, "study_programs": [1, 2]}}, {"model": "api.module", "pk": 5, "fields": {"name": "Kollaboratives Arbeiten", "description": "Dieses Modul vermittelt die Grundlagen effektiver Zusammenarbeit in Teams, insbesondere im digitalen und technischen Umfeld. Die Studierenden lernen Werkzeuge und Methoden kennen, die die Organisation, Kommunikation und Koordination in Gruppen fördern. Themen wie Projektmanagement, Konfliktlösung, Rollenverteilung und agiles Arbeiten (z. B. Scrum oder Kanban) stehen im Fokus. Zudem wird der Einsatz moderner Kollaborationsplattformen und Tools wie Git, Trello oder Microsoft Teams praktisch erprobt. Ziel des Moduls ist es, die Fähigkeit zur produktiven Zusammenarbeit zu entwickeln, um Projekte effizient und erfolgreich umzusetzen.", "semester": 1, "study_programs": [1, 2]}}, {"model": "api.module", "pk": 6, "fields": {"name": "Statistik - Wahrscheinlichkeit und deskriptive Statistik", "description": "In diesem Modul werden die grundlegenden Konzepte der Statistik vermittelt, mit Schwerpunkt auf Wahrscheinlichkeitsrechnung und deskriptiver Statistik. Die Studierenden lernen, Daten zu sammeln, zu analysieren und verständlich darzustellen. Zentrale Themen sind: Wahrscheinlichkeitsmodelle, Verteilungen, Kennzahlen wie Mittelwert, Median und Standardabweichung sowie die Visualisierung von Daten durch Diagramme und Tabellen. Praktische Übungen zeigen, wie statistische Methoden in realen Szenarien angewendet werden. Ziel des Moduls ist es, die Grundlagen der Statistik zu verstehen und eine Basis für weiterführende Analysen und datengetriebene Entscheidungen zu schaffen.", "semester": 1, "study_programs": [1]}}, {"model": "api.module", "pk": 7, "fields": {"name": "Objektorientierte und funktionale Programmierung mit Python", "description": "Dieses Modul vermittelt die Grundlagen der objektorientierten und funktionalen Programmierung in Python. Die Studierenden lernen zentrale Konzepte wie Klassen, Objekte, Vererbung und Polymorphie kennen, ebenso wie funktionale Ansätze mit Lambda-Funktionen, Rekursion und immutablen Daten. Ziel ist es, die verschiedenen Programmierparadigmen zu verstehen und deren Einsatzmöglichkeiten in Python zu erlernen, um strukturierte und effiziente Software zu entwickeln.", "semester": 2, "study_programs": [1, 2]}}, {"model": "api.module", "pk": 8, "fields": {"name": "Mathematik: Lineare Algebra", "description": "Dieses Modul behandelt die Grundlagen der linearen Algebra, die eine wichtige Rolle in vielen technischen und wissenschaftlichen Anwendungen spielt. Themen sind unter anderem Vektoren, Matrizen, lineare Gleichungssysteme, Determinanten und Eigenwerte. Die Studierenden lernen, mathematische Probleme zu modellieren und zu lösen, sowie lineare Transformationen und deren Anwendungen zu verstehen. Ziel ist es, ein solides Fundament in der linearen Algebra zu schaffen, das für weiterführende mathematische und technische Module erforderlich ist.", "semester": 2, "study_programs": [1, 2]}}, {"model": "api.module", "pk": 9, "fields": {"name": "Interkulturelle und ethische Handlungskompetenzen", "description": "Dieses Modul fördert das Verständnis für kulturelle Vielfalt und ethische Fragestellungen im beruflichen und gesellschaftlichen Kontext. Die Studierenden lernen, kulturelle Unterschiede zu erkennen und respektvoll damit umzugehen. Schwerpunkte sind Kommunikationsstrategien, interkulturelle Konfliktbewältigung und die Reflexion ethischer Verantwortung in globalen Zusammenhängen. Ziel des Moduls ist es, die Fähigkeit zu entwickeln, in interkulturellen Teams erfolgreich zu agieren und verantwortungsvolle Entscheidungen in einem internationalen und ethischen Kontext zu treffen.", "semester": 2, "study_programs": [1]}}, {"model": "api.module", "pk": 10, "fields": {"name": "Statistik: Schließende Statistik", "description": "Dieses Modul führt in die Grundlagen der schließenden Statistik ein, die es ermöglicht, von Stichprobendaten auf Grundgesamtheiten zu schließen. Themen sind unter anderem Hypothesentests, Konfidenzintervalle, Signifikanztests und Regressionsanalysen. Die Studierenden lernen, statistische Methoden anzuwenden, Ergebnisse kritisch zu bewerten und datenbasierte Entscheidungen zu treffen. Ziel des Moduls ist es, fundierte Kenntnisse in der Analyse und Interpretation statistischer Daten zu entwickeln und diese auf praktische Fragestellungen anzuwenden.", "semester": 2, "study_programs": [1]}}, {"model": "api.module", "pk": 11, "fields": {"name": "Cloud Computing", "description": "Dieses Modul vermittelt die grundlegenden Konzepte, Technologien und Architekturen des Cloud Computing. Schwerpunkte sind Virtualisierung, Skalierbarkeit, Service-Modelle (IaaS, PaaS, SaaS) und die Nutzung von Cloud-Diensten wie AWS, Azure oder Google Cloud. Die Studierenden lernen, wie Cloud-Umgebungen effizient eingesetzt und verwaltet werden können, einschließlich Themen wie Datensicherheit, Kostenoptimierung und Datenschutz. Ziel des Moduls ist es, ein Verständnis für die Möglichkeiten und Herausforderungen von Cloud-Lösungen zu entwickeln und praktische Erfahrungen mit Cloud-Technologien zu sammeln.", "semester": 2, "study_programs": [1]}}, {"model": "api.userstudyprogram", "pk": 1, "fields": {"user": 1, "study_program": 1, "enrollment_date": "2024-09-21", "time_model": 3}}, {"model": "api.studentmodule", "pk": 1, "fields": {"user": 1, "module": 1, "is_active": false, "grade": "1.12", "completion_date": "2024-11-13"}}, {"model": "api.studentmodule", "pk": 2, "fields": {"user": 1, "module": 2, "is_active": false, "grade": "2.00", "completion_date": "2024-11-13"}}, {"model": "api.studentmodule", "pk": 3, "fields": {"user": 1, "module": 3, "is_active": false, "grade": "1.00", "completion_date": "2024-09-20"}}, {"model": "api.studentmodule", "pk": 4, "fields": {"user": 1, "module": 4, "is_active": false, "grade": "1.00", "completion_date": "2024-08-20"}}, {"model": "api.studentmodule", "pk": 5, "fields": {"user": 1, "module": 5, "is_active": false, "grade": "3.00", "completion_date": "2024-07-20"}}, {"model": "api.studentmodule", "pk": 6, "fields": {"user": 1, "module": 6, "is_active": false, "grade": "1.70", "completion_date": "2024-05-20"}}, {"model": "api.studentmodule", "pk": 7, "fields": {"user": 1, "module": 7, "is_active": true, "grade": null, "completion_date": null}}, {"model": "api.studentmodule", "pk": 8, "fields": {"user": 1, "module": 11, "is_active": true, "grade": null, "completion_date": null}}, {"model": "api.studentmodule", "pk": 9, "fields": {"user": 1, "module": 10, "is_active": true, "grade": null, "completion_date": null}}, {"model": "api.studentmodule", "pk": 10, "fields": {"user": 1, "module": 9, "is_active": false, "grade": "4.00", "completion_date": "2024-09-10"}}, {"model": "api.appointment", "pk": 1, "fields": {"title": "Learning with Tim", "description": "Learning with Tim", "scheduled_at": "2024-11-30T08:44:59Z", "category": "PERS", "updated_at": "2024-11-25T08:17:03.558Z", "users": [1]}}, {"model": "api.appointment", "pk": 2, "fields": {"title": "Mathe Klausur", "description": "Mathe Klausur", "scheduled_at": "2024-11-24T08:45:28Z", "category": "EXM", "updated_at": "2024-11-25T08:24:37.139Z", "users": [1]}}, {"model": "api.appointment", "pk": 3, "fields": {"title": "Besprechung mit Frau Lemke", "description": "Besprechung mit Frau Lemke", "scheduled_at": "2024-11-25T08:25:21Z", "category": "ORG", "updated_at": "2024-11-25T08:25:23.382Z", "users": [1]}}]
+[
+    {
+      "model": "api.appointment",
+      "pk": 43,
+      "fields": {
+        "title": "Klausurvorbereitung Mathe",
+        "description": "Übung und Wiederholung der wichtigsten Themen für die anstehende Matheklausur.",
+        "scheduled_at": "2025-02-25T09:30:00Z",
+        "category": "EXM",
+        "updated_at": "2025-02-25T09:30:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 44,
+      "fields": {
+        "title": "Projektteam-Meeting",
+        "description": "Abstimmung im Team über Aufgabenverteilung für das Gruppenprojekt.",
+        "scheduled_at": "2025-02-27T15:15:00Z",
+        "category": "ORG",
+        "updated_at": "2025-02-27T15:15:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 45,
+      "fields": {
+        "title": "Entspannter Lernspaziergang",
+        "description": "Gemeinsamer Spaziergang mit Kommilitonen zur Stressreduktion vor der Prüfung.",
+        "scheduled_at": "2025-03-01T11:00:00Z",
+        "category": "PERS",
+        "updated_at": "2025-03-01T11:00:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 46,
+      "fields": {
+        "title": "Seminartermin Raumreservierung",
+        "description": "Organisatorische Besprechung zur Reservierung von Räumen für das Seminar.",
+        "scheduled_at": "2025-03-03T13:00:00Z",
+        "category": "ORG",
+        "updated_at": "2025-03-03T13:00:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 47,
+      "fields": {
+        "title": "Probeprüfung Informatik",
+        "description": "Simulation einer Informatik-Prüfung zur Selbstüberprüfung des Lernfortschritts.",
+        "scheduled_at": "2025-03-07T10:45:00Z",
+        "category": "EXM",
+        "updated_at": "2025-03-07T10:45:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 48,
+      "fields": {
+        "title": "Sprechstunde mit Studienberater",
+        "description": "Beratungsgespräch zu Studienverlauf und individuellen Herausforderungen.",
+        "scheduled_at": "2025-03-12T08:30:00Z",
+        "category": "PERS",
+        "updated_at": "2025-03-12T08:30:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 49,
+      "fields": {
+        "title": "Planung Campus-Event",
+        "description": "Organisationstreffen zur Planung eines studentischen Events auf dem Campus.",
+        "scheduled_at": "2025-03-13T14:20:00Z",
+        "category": "ORG",
+        "updated_at": "2025-03-13T14:20:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 50,
+      "fields": {
+        "title": "Übungsklausur Vorbereitung",
+        "description": "Gemeinsame Übungsklausur in Vorbereitung auf die nächste Prüfungsphase.",
+        "scheduled_at": "2025-03-15T16:00:00Z",
+        "category": "EXM",
+        "updated_at": "2025-03-15T16:00:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 51,
+      "fields": {
+        "title": "Lernpause im Café",
+        "description": "Entspannte Pause mit Kaffee und Austausch mit Kommilitonen.",
+        "scheduled_at": "2025-03-18T11:15:00Z",
+        "category": "PERS",
+        "updated_at": "2025-03-18T11:15:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 52,
+      "fields": {
+        "title": "Teammeeting Projektarbeit",
+        "description": "Besprechung der nächsten Schritte im Gruppenprojekt.",
+        "scheduled_at": "2025-03-21T13:45:00Z",
+        "category": "ORG",
+        "updated_at": "2025-03-21T13:45:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 53,
+      "fields": {
+        "title": "Mathe Übungsklausur",
+        "description": "Testklausur zur Überprüfung des aktuellen Lernstands in Mathematik.",
+        "scheduled_at": "2025-03-24T09:00:00Z",
+        "category": "EXM",
+        "updated_at": "2025-03-24T09:00:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 54,
+      "fields": {
+        "title": "Organisationstreffen im Studentenrat",
+        "description": "Besprechung der anstehenden Veranstaltungen im Studentenrat.",
+        "scheduled_at": "2025-03-26T15:30:00Z",
+        "category": "ORG",
+        "updated_at": "2025-03-26T15:30:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 55,
+      "fields": {
+        "title": "Freizeitaktivität: Basketball",
+        "description": "Treffen mit Freunden zum Basketballspielen als Ausgleich zum Studium.",
+        "scheduled_at": "2025-03-29T12:00:00Z",
+        "category": "PERS",
+        "updated_at": "2025-03-29T12:00:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 56,
+      "fields": {
+        "title": "Englisch-Vokabeltraining",
+        "description": "Intensive Vokabelübungen zur Vorbereitung auf die Englischklausur.",
+        "scheduled_at": "2025-04-01T10:00:00Z",
+        "category": "EXM",
+        "updated_at": "2025-04-01T10:00:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 57,
+      "fields": {
+        "title": "Yoga-Kurs im Campus",
+        "description": "Entspannende Yoga-Session zur Stressbewältigung.",
+        "scheduled_at": "2025-04-03T17:00:00Z",
+        "category": "PERS",
+        "updated_at": "2025-04-03T17:00:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 58,
+      "fields": {
+        "title": "Vorbereitung für Studiengruppe",
+        "description": "Treffen zur Planung der nächsten Sitzung der Studiengruppe.",
+        "scheduled_at": "2025-04-07T08:45:00Z",
+        "category": "ORG",
+        "updated_at": "2025-04-07T08:45:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 59,
+      "fields": {
+        "title": "Chemie Klausur-Review",
+        "description": "Nachbesprechung und Wiederholung der Chemiethemen vor der Klausur.",
+        "scheduled_at": "2025-04-09T14:30:00Z",
+        "category": "EXM",
+        "updated_at": "2025-04-09T14:30:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 60,
+      "fields": {
+        "title": "Filmabend mit Freunden",
+        "description": "Gemeinsamer Filmabend zur Entspannung nach einer intensiven Lernwoche.",
+        "scheduled_at": "2025-04-11T16:15:00Z",
+        "category": "PERS",
+        "updated_at": "2025-04-11T16:15:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 61,
+      "fields": {
+        "title": "Planung Praktikumsmesse",
+        "description": "Treffen zur Organisation der Teilnahme an der Praktikumsmesse.",
+        "scheduled_at": "2025-04-15T12:30:00Z",
+        "category": "ORG",
+        "updated_at": "2025-04-15T12:30:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 62,
+      "fields": {
+        "title": "Mathe Nachhilfestunde",
+        "description": "Zusätzliche Nachhilfestunde in Mathematik zur Klausurvorbereitung.",
+        "scheduled_at": "2025-04-18T15:00:00Z",
+        "category": "EXM",
+        "updated_at": "2025-04-18T15:00:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 63,
+      "fields": {
+        "title": "Frühstückstreffen mit Kommilitonen",
+        "description": "Gemütliches Frühstück zum Austausch und zur Motivation.",
+        "scheduled_at": "2025-04-21T11:00:00Z",
+        "category": "PERS",
+        "updated_at": "2025-04-21T11:00:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 64,
+      "fields": {
+        "title": "Projektpräsentation vorbereiten",
+        "description": "Treffen zur Vorbereitung der Abschlusspräsentation des Gruppenprojekts.",
+        "scheduled_at": "2025-04-23T10:30:00Z",
+        "category": "ORG",
+        "updated_at": "2025-04-23T10:30:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 65,
+      "fields": {
+        "title": "Übungsklausur in Informatik",
+        "description": "Testdurchlauf einer Informatik-Klausur zur Selbsteinschätzung.",
+        "scheduled_at": "2025-04-25T14:00:00Z",
+        "category": "EXM",
+        "updated_at": "2025-04-25T14:00:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 66,
+      "fields": {
+        "title": "Seminarraum buchen",
+        "description": "Organisatorische Angelegenheiten zur Buchung des Seminarraums.",
+        "scheduled_at": "2025-04-29T09:45:00Z",
+        "category": "ORG",
+        "updated_at": "2025-04-29T09:45:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 67,
+      "fields": {
+        "title": "Kaffee mit Dozent",
+        "description": "Informelles Treffen mit dem Dozenten zum Austausch über Kursinhalte.",
+        "scheduled_at": "2025-05-01T13:15:00Z",
+        "category": "PERS",
+        "updated_at": "2025-05-01T13:15:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 68,
+      "fields": {
+        "title": "Probeprüfung Physik",
+        "description": "Simulation einer Physikklausur im Rahmen der Prüfungsvorbereitung.",
+        "scheduled_at": "2025-05-03T16:45:00Z",
+        "category": "EXM",
+        "updated_at": "2025-05-03T16:45:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 69,
+      "fields": {
+        "title": "Übungsklausur Chemie",
+        "description": "Testklausur zur Überprüfung des Verständnisses in Chemie.",
+        "scheduled_at": "2025-05-05T10:30:00Z",
+        "category": "EXM",
+        "updated_at": "2025-05-05T10:30:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 70,
+      "fields": {
+        "title": "Studentenwerk Treffen",
+        "description": "Besprechung von Themen und Projekten im Rahmen des Studentenwerks.",
+        "scheduled_at": "2025-05-09T15:30:00Z",
+        "category": "ORG",
+        "updated_at": "2025-05-09T15:30:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 71,
+      "fields": {
+        "title": "Mentoring-Gespräch",
+        "description": "Individuelles Gespräch mit dem Mentor zur Studienberatung.",
+        "scheduled_at": "2025-05-13T11:15:00Z",
+        "category": "PERS",
+        "updated_at": "2025-05-13T11:15:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 72,
+      "fields": {
+        "title": "Mathe Lerngruppe",
+        "description": "Treffen der Lerngruppe zur intensiven Klausurvorbereitung in Mathematik.",
+        "scheduled_at": "2025-05-15T14:45:00Z",
+        "category": "EXM",
+        "updated_at": "2025-05-15T14:45:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 73,
+      "fields": {
+        "title": "Organisation Workshop",
+        "description": "Workshop zur Verbesserung der Organisation im Studium.",
+        "scheduled_at": "2025-05-17T12:00:00Z",
+        "category": "ORG",
+        "updated_at": "2025-05-17T12:00:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 74,
+      "fields": {
+        "title": "Prüfungsfeedback",
+        "description": "Besprechung des Feedbacks zur letzten Klausur.",
+        "scheduled_at": "2025-05-21T10:00:00Z",
+        "category": "EXM",
+        "updated_at": "2025-05-21T10:00:00Z",
+        "users": [1]
+      }
+    },
+    {
+      "model": "api.appointment",
+      "pk": 75,
+      "fields": {
+        "title": "Abendessen mit Freunden",
+        "description": "Gemeinsames Abendessen zur Entspannung und zum Austausch nach der Prüfungsphase.",
+        "scheduled_at": "2025-05-23T15:00:00Z",
+        "category": "PERS",
+        "updated_at": "2025-05-23T15:00:00Z",
+        "users": [1]
+      }
+    }
+  ]
+  
