@@ -163,6 +163,7 @@ footer {
   transform: translateX(-50%);
   width: 50%;
   border-radius: 15px 15px 0 0;
+  z-index: 9999;
 }
 
 footer nav ul {
