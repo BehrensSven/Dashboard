@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy package files and install dependencies
 COPY package*.json ./
 ENV NODE_ENV=development
-RUN npm install
+RUN yarn install
 
 # Copy the remaining code
 COPY . .
@@ -16,4 +16,4 @@ COPY . .
 EXPOSE 8080
 
 # Start command: Launch the development server
-CMD ["npm", "run", "serve"]
+CMD ["yarn", "serve"]
